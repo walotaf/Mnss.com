@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Building</title>
+  <link rel="stylesheet" href="ff.css">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header>
+        <nav>
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+                <li><a href="Building.html">Building</a></li>
+                <li><a href="Teachers.html">Teachers</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="creator.html"a>creator</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="slider">
+    <div class="slides">
+        <img src="Head.png" alt="Image 1">
+        <img src="Hhh.png" alt="Image 2">
+        <img src="MN LOGO.png" alt="Image 3">
+    </div>
+</div>
+
+  
+</body>
+<script>
+  let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+
+function showSlides() {
+    slideIndex++;
+    if (slideIndex >= images.length) slideIndex = 0;
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    setTimeout(showSlides, 3000);
+}
+
+showSlides();
+
+</script>
+</html>
