@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="J.js">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+                <li><a href="Building.html">Building</a></li>
+                <li><a href="Teachers.html">Teachers</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="creator.html"a>creator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <input type="search" id="teacher-search" placeholder="Search for a teacher...">
+    <p style="font-size: 18px; color: white; text-align: justify;background-color: rgba(0, 0, 0, 0.5);"> Meet our teachers at Mwanza Secondary School are passionate educators, mentors, and guides, committed to helping students reach their full potential. </p>
+    <section class="teachers-grid">
+        <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacher</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="Hhh.png" alt="Teacher 1">
+                <h2>Mr. Boazi</h2>
+                <p>Computer, chemisrty mathematics</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Bakali</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+            <div class="teacher">
+                <img src="head.png" alt="Teacher 1">
+                <h2>Mr. Saka</h2>
+                <p>Head Teacherr</p>
+            </div>
+    </section>
+</main>
+    <footer>
+        <p>&copy; 2026 Mwanza Secondary School </p>
+    </footer>
+</body>
+<script>
+  const searchInput = document.getElementById('teacher-search');
+const teachers = document.querySelectorAll('.teacher');
+
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    teachers.forEach((teacher) => {
+        const name = teacher.querySelector('h2').textContent.toLowerCase();
+        const role = teacher.querySelector('p').textContent.toLowerCase();
+        if (name.includes(searchTerm) || role.includes(searchTerm)) {
+            teacher.style.display = 'block';
+        } else {
+            teacher.style.display = 'none';
+        }
+    });
+});
+
+</script>
+</html>
